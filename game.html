@@ -163,6 +163,125 @@
         color: #4be1ec;
         text-shadow: 0 0 10px #4be1ec;
       }
+
+      @media screen and (max-width: 768px) {
+        body {
+          padding: 10px;
+        }
+
+        .game-container {
+          padding: 15px;
+        }
+
+        header {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        header h1 {
+          font-size: 20px;
+        }
+
+        .folder-tab {
+          margin-right: 0;
+          margin-bottom: 10px;
+          width: 100%;
+          text-align: center;
+        }
+
+        .character-sheet,
+        .notes-section {
+          padding: 15px;
+        }
+
+        .clue,
+        .inventory-item {
+          flex-direction: column;
+          gap: 10px;
+          text-align: center;
+        }
+
+        button {
+          width: 100%;
+          margin: 5px 0;
+        }
+
+        .file-label {
+          display: block;
+          margin-bottom: 5px;
+          margin-right: 0;
+        }
+
+        .notes-list textarea {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        body {
+          padding: 5px;
+        }
+
+        .game-container {
+          padding: 10px;
+        }
+
+        header h1 {
+          font-size: 16px;
+        }
+
+        .character-sheet,
+        .notes-section,
+        #cluesSection,
+        #inventorySection {
+          padding: 10px;
+        }
+
+        input[type="text"],
+        textarea {
+          font-size: 12px;
+          padding: 6px;
+        }
+
+        .timestamp {
+          display: block;
+          margin-top: 5px;
+        }
+
+        h2,
+        h3 {
+          font-size: 16px;
+        }
+
+        button {
+          padding: 6px 12px;
+          font-size: 12px;
+        }
+      }
+
+      /* Ottimizzazioni per schermi più grandi */
+      @media screen and (min-width: 1200px) {
+        .game-container {
+          padding: 30px;
+        }
+
+        header h1 {
+          font-size: 28px;
+        }
+
+        .character-sheet,
+        .notes-section {
+          padding: 25px;
+        }
+      }
+
+      /* Miglioramenti per l'accessibilità */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+          animation: none !important;
+        }
+      }
     </style>
   </head>
   <body>

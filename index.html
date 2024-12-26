@@ -207,6 +207,126 @@
         position: relative;
         z-index: 2;
       }
+      @media screen and (max-width: 768px) {
+        .mysterious-container {
+          padding: 25px;
+          margin: 15px auto;
+          width: 90%;
+        }
+
+        .cryptic-text {
+          font-size: 0.8em;
+          line-height: 1.6;
+          margin: 20px 0;
+        }
+
+        .btn {
+          display: block;
+          width: calc(100% - 40px);
+          margin: 15px auto;
+          text-align: center;
+        }
+
+        .mysterious-symbol {
+          transform: scale(0.8) rotate(45deg);
+        }
+
+        .symbol-1 {
+          top: 5%;
+          left: 2%;
+        }
+
+        .symbol-2 {
+          top: 45%;
+          right: 2%;
+        }
+
+        .symbol-3 {
+          bottom: 5%;
+          left: 45%;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .mysterious-container {
+          padding: 20px;
+          margin: 10px auto;
+        }
+
+        .cryptic-text {
+          font-size: 0.7em;
+          line-height: 1.5;
+          margin: 15px 0;
+        }
+
+        .typewriter {
+          white-space: normal;
+          animation: none;
+          /* Disabilitiamo l'effetto typewriter su mobile per migliorare la leggibilità */
+        }
+
+        .mysterious-symbol {
+          display: none;
+          /* Nascondiamo i simboli su schermi molto piccoli per risparmiare spazio */
+        }
+
+        .glitch {
+          animation-duration: 2s;
+          /* Rallentiamo leggermente l'effetto glitch su mobile */
+        }
+
+        .scanner {
+          height: 1px;
+          /* Rendiamo la linea scanner più sottile su mobile */
+        }
+      }
+
+      /* Ottimizzazioni per schermi grandi */
+      @media screen and (min-width: 1200px) {
+        .mysterious-container {
+          padding: 50px;
+          max-width: 1000px;
+        }
+
+        .cryptic-text {
+          font-size: 1em;
+          line-height: 2;
+        }
+      }
+
+      /* Fix per il layout su schermi molto piccoli */
+      @media screen and (max-width: 320px) {
+        .mysterious-container {
+          padding: 15px;
+        }
+
+        .btn {
+          width: calc(100% - 20px);
+          padding: 8px;
+          font-size: 0.8em;
+        }
+      }
+
+      /* Miglioramenti per l'accessibilità */
+      @media (prefers-reduced-motion: reduce) {
+        .glitch,
+        .scanner,
+        .typewriter,
+        .btn::before {
+          animation: none !important;
+        }
+
+        .mysterious-symbol {
+          transform: none !important;
+        }
+      }
+
+      /* Supporto per dark mode del sistema */
+      @media (prefers-color-scheme: dark) {
+        .mysterious-container {
+          background: rgba(27, 38, 59, 0.98);
+        }
+      }
     </style>
   </head>
   <body>
