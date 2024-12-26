@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cena con Delitto - Introduzione</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .glitch-container {
+        position: relative;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .glitch {
+        position: relative;
+        animation: glitch 1s infinite;
+      }
+
+      @keyframes glitch {
+        0% {
+          transform: none;
+          opacity: 1;
+        }
+        7% {
+          transform: skew(-0.5deg, -0.9deg);
+          opacity: 0.75;
+        }
+        10% {
+          transform: none;
+          opacity: 1;
+        }
+        27% {
+          transform: none;
+          opacity: 1;
+        }
+        30% {
+          transform: skew(0.8deg, -0.1deg);
+          opacity: 0.75;
+        }
+        35% {
+          transform: none;
+          opacity: 1;
+        }
+        52% {
+          transform: none;
+          opacity: 1;
+        }
+        55% {
+          transform: skew(-1deg, 0.2deg);
+          opacity: 0.75;
+        }
+        50% {
+          transform: none;
+          opacity: 1;
+        }
+        72% {
+          transform: none;
+          opacity: 1;
+        }
+        75% {
+          transform: skew(0.4deg, 1deg);
+          opacity: 0.75;
+        }
+        80% {
+          transform: none;
+          opacity: 1;
+        }
+        100% {
+          transform: none;
+          opacity: 1;
+        }
+      }
+
+      .mysterious-container {
+        position: relative;
+        background: rgba(27, 38, 59, 0.95);
+        padding: 40px;
+        border-radius: 10px;
+        margin: 20px auto;
+        max-width: 800px;
+        box-shadow: 0 0 30px rgba(241, 60, 60, 0.2);
+        overflow: hidden;
+      }
+
+      .mysterious-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at 20% 50%,
+            rgba(75, 225, 236, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 50%,
+            rgba(241, 60, 60, 0.1) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+      }
+
+      .typewriter {
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0 auto;
+        animation: typing 3.5s steps(40, end);
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      .scanner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: rgba(75, 225, 236, 0.5);
+        animation: scan 3s ease-in-out infinite;
+      }
+
+      @keyframes scan {
+        0% {
+          top: 0;
+        }
+        50% {
+          top: 100%;
+        }
+        100% {
+          top: 0;
+        }
+      }
+
+      .btn {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          45deg,
+          transparent,
+          rgba(75, 225, 236, 0.1),
+          transparent
+        );
+        transform: rotate(45deg);
+        animation: shine 3s infinite;
+        z-index: -1;
+      }
+
+      @keyframes shine {
+        0% {
+          transform: translateX(-100%) rotate(45deg);
+        }
+        100% {
+          transform: translateX(100%) rotate(45deg);
+        }
+      }
+
+      .cryptic-text {
+        font-family: "Press Start 2P", monospace;
+        font-size: 0.9em;
+        line-height: 1.8;
+        color: rgba(234, 234, 234, 0.9);
+        text-shadow: 0 0 5px rgba(75, 225, 236, 0.5);
+        margin: 30px 0;
+      }
+
+      .mysterious-symbol {
+        position: absolute;
+        opacity: 0.1;
+        transform: rotate(45deg);
+        pointer-events: none;
+      }
+
+      .symbol-1 {
+        top: 10%;
+        left: 5%;
+      }
+      .symbol-2 {
+        top: 40%;
+        right: 5%;
+      }
+      .symbol-3 {
+        bottom: 10%;
+        left: 50%;
+      }
+
+      .content {
+        position: relative;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glitch-container">
+      <header class="glitch">
+        <h1>Benvenuti alla Cena con Delitto</h1>
+        <div class="scanner"></div>
+      </header>
+    </div>
+
+    <div class="mysterious-container">
+      <!-- Simboli misteriosi sullo sfondo -->
+      <svg
+        class="mysterious-symbol symbol-1"
+        width="100"
+        height="100"
+        viewBox="0 0 100 100"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          r="45"
+          fill="none"
+          stroke="#4be1ec"
+          stroke-width="2"
+        />
+        <path
+          d="M50 5 L95 50 L50 95 L5 50 Z"
+          fill="none"
+          stroke="#4be1ec"
+          stroke-width="2"
+        />
+      </svg>
+
+      <svg
+        class="mysterious-symbol symbol-2"
+        width="80"
+        height="80"
+        viewBox="0 0 80 80"
+      >
+        <path
+          d="M40 5 L75 40 L40 75 L5 40 Z"
+          fill="none"
+          stroke="#f13c3c"
+          stroke-width="2"
+        />
+        <circle
+          cx="40"
+          cy="40"
+          r="20"
+          fill="none"
+          stroke="#f13c3c"
+          stroke-width="2"
+        />
+      </svg>
+
+      <svg
+        class="mysterious-symbol symbol-3"
+        width="120"
+        height="120"
+        viewBox="0 0 120 120"
+      >
+        <path
+          d="M60 10 L110 60 L60 110 L10 60 Z"
+          fill="none"
+          stroke="#4be1ec"
+          stroke-width="2"
+        />
+        <circle
+          cx="60"
+          cy="60"
+          r="30"
+          fill="none"
+          stroke="#4be1ec"
+          stroke-width="2"
+        />
+        <circle
+          cx="60"
+          cy="60"
+          r="50"
+          fill="none"
+          stroke="#4be1ec"
+          stroke-width="2"
+        />
+      </svg>
+
+      <div class="content">
+        <p class="typewriter cryptic-text">
+          Un'enigmatica villa del futuro vi attende...
+        </p>
+
+        <p class="cryptic-text">
+          In una notte dove la tecnologia incontra il mistero, siete stati
+          selezionati per partecipare a un evento esclusivo. Ma dietro le luci
+          al neon e gli ologrammi danzanti, si cela una verità oscura.
+        </p>
+
+        <p class="cryptic-text" style="color: #f13c3c">
+          Uno di voi nasconde un algoritmo letale. Chi sarà il debugger? Chi il
+          virus?
+        </p>
+
+        <div style="text-align: center; margin-top: 40px; position: relative">
+          <a href="login.html" class="btn"> Inizia L'Indagine </a>
+          <a href="dashboard.html" class="btn"> Accedi alla Rete </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Effetto nebbia di background -->
+    <div
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+        opacity: 0.4;
+      "
+    >
+      <svg width="100%" height="100%">
+        <filter id="noise">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.015"
+            numOctaves="3"
+          />
+          <feDisplacementMap in="SourceGraphic" scale="5" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noise)" />
+      </svg>
+    </div>
+  </body>
+</html>

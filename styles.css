@@ -1,0 +1,145 @@
+/* Generale */
+body {
+  font-family: "Press Start 2P", monospace;
+  background-color: #1b1b2f; /* Colore scuro per un'atmosfera misteriosa */
+  color: #eaeaea; /* Colore chiaro per il testo principale */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  /* Effetto futuristico */
+  border-bottom: 3px solid #f13c3c; /* Rosso intenso per sottolineare il pericolo */
+}
+header h1 {
+  font-size: 2.5rem;
+  color: #f13c3c; /* Rosso drammatico per il titolo */
+  text-shadow: 0 0 15px #ff5e5e, 0 0 5px #2a2a72; /* Effetto neon */
+}
+header p {
+  font-size: 1.2rem;
+  color: #f5f5f5; /* Colore neutro per descrizioni */
+  text-shadow: 0 0 5px #4be1ec; /* Bagliore leggero */
+}
+
+/* Contenuto Principale */
+.content {
+  max-width: 800px;
+  text-align: center;
+  margin: 20px;
+}
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ffffff; /* Colore del testo principale */
+}
+.content a.btn {
+  display: inline-block;
+  margin: 20px 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #2b2b2b; /* Testo scuro per contrastare */
+  background-color: #f5f5f5; /* Pulsanti ben visibili */
+  border: 2px solid #4be1ec;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.content a.btn:hover {
+  background-color: #4be1ec;
+  color: #2b2b2b; /* Cambia colore al passaggio del mouse */
+}
+
+/* Login Form */
+.login-container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Sfondo trasparente per mistero */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+}
+.login-container h1 {
+  font-size: 2rem;
+  color: #f13c3c;
+  text-shadow: 0 0 10px #ff5e5e;
+}
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.login-container input,
+.login-container button {
+  font-family: "Press Start 2P", monospace;
+  background-color: #1b263b; /* Blu scuro per coerenza */
+  color: #f5f5f5;
+  border: 2px solid #4be1ec;
+  padding: 10px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 300px;
+  box-shadow: 0 0 10px #4be1ec;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+.login-container input::placeholder {
+  color: #9d9d9d;
+}
+.login-container button {
+  cursor: pointer;
+}
+.login-container button:hover {
+  background-color: #4be1ec;
+  color: #2b2b2b;
+}
+
+/* Scena del Crimine */
+.crime-scene-header {
+  text-align: center;
+  padding: 20px;
+
+  border-bottom: 3px solid #4be1ec;
+  color: #ffffff;
+}
+.crime-scene-header h1 {
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px #f13c3c;
+}
+.crime-description {
+  padding: 20px;
+  margin: 20px auto;
+  color: #eaeaea;
+}
+.crime-description h2 {
+  color: #4be1ec;
+  text-shadow: 0 0 10px #4be1ec;
+}
+.crime-description p {
+  color: #eaeaea;
+}
+.crime-map {
+  text-align: center;
+  margin-top: 20px;
+}
+.crime-map h2 {
+  color: #f13c3c;
+  text-shadow: 0 0 10px #ff5e5e;
+}
+.crime-map img {
+  width: 100%;
+  max-width: 600px;
+  border: 2px solid #4be1ec;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+}

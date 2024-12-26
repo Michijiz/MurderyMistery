@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cena con Delitto - File Digitale</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Press Start 2P", monospace;
+        background-color: #1b1b2f;
+        color: #eaeaea;
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+      }
+
+      .game-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border: 2px solid #4be1ec;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(75, 225, 236, 0.3);
+      }
+
+      header {
+        text-align: center;
+        border-bottom: 3px solid #f13c3c;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        margin: 0;
+        color: #f13c3c;
+        font-size: 24px;
+        text-shadow: 0 0 15px #ff5e5e, 0 0 5px #2a2a72;
+      }
+
+      .folder-tab {
+        background-color: #1b263b;
+        border: 2px solid #4be1ec;
+        border-bottom: none;
+        border-radius: 5px 5px 0 0;
+        padding: 5px 15px;
+        margin-right: 10px;
+        font-weight: bold;
+        color: #4be1ec;
+        text-shadow: 0 0 5px #4be1ec;
+      }
+
+      .character-sheet,
+      .notes-section {
+        background-color: rgba(27, 38, 59, 0.9);
+        border: 2px solid #4be1ec;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 0 5px 5px 5px;
+        box-shadow: 0 0 10px rgba(75, 225, 236, 0.2);
+      }
+
+      .clue,
+      .inventory-item {
+        background-color: #1b263b;
+        border: 2px solid #4be1ec;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 3px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 5px rgba(75, 225, 236, 0.2);
+      }
+
+      button {
+        font-family: "Press Start 2P", monospace;
+        background-color: #1b263b;
+        color: #f5f5f5;
+        border: 2px solid #4be1ec;
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 0 10px #4be1ec;
+        transition: 0.3s ease-in-out;
+      }
+
+      button:hover {
+        background-color: #4be1ec;
+        color: #2b2b2b;
+      }
+
+      input[type="text"],
+      textarea {
+        font-family: "Press Start 2P", monospace;
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+        background-color: #1b263b;
+        color: #f5f5f5;
+        border: 2px solid #4be1ec;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #4be1ec;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: #9d9d9d;
+      }
+
+      .notes-list {
+        margin-top: 20px;
+      }
+
+      .notes-list textarea {
+        width: calc(100% - 20px);
+        margin: 10px 0;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #4be1ec;
+        margin: 15px 0;
+        box-shadow: 0 0 5px #4be1ec;
+      }
+
+      #cluesSection,
+      #inventorySection {
+        background-color: rgba(27, 38, 59, 0.8);
+        border: 2px solid #4be1ec;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(75, 225, 236, 0.2);
+      }
+
+      .file-label {
+        background-color: #f13c3c;
+        color: #f5f5f5;
+        padding: 3px 10px;
+        border-radius: 3px;
+        font-size: 0.8em;
+        margin-right: 10px;
+        text-shadow: 0 0 5px #ff5e5e;
+      }
+
+      .timestamp {
+        color: #4be1ec;
+        font-size: 0.7em;
+        font-style: italic;
+        text-shadow: 0 0 5px #4be1ec;
+      }
+
+      h2,
+      h3 {
+        color: #4be1ec;
+        text-shadow: 0 0 10px #4be1ec;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game-container">
+      <header>
+        <h1>File Digitale</h1>
+        <button id="logoutBtn">Disconnetti</button>
+      </header>
+
+      <div class="folder-tab">Profilo Soggetto</div>
+      <div class="character-sheet">
+        <h2 id="characterName"></h2>
+        <p>
+          <span class="file-label">Status</span><span id="characterRole"></span>
+        </p>
+        <p>
+          <span class="file-label">Dati</span
+          ><span id="characterBackground"></span>
+        </p>
+
+        <div id="cluesSection">
+          <h3>Database Indizi</h3>
+          <div id="cluesList"></div>
+          <input
+            type="text"
+            id="newClueInput"
+            placeholder="Inserisci nuovo dato..."
+          />
+          <button id="addClue">Archivia Dato</button>
+        </div>
+
+        <div id="inventorySection">
+          <h3>Prove Digitali</h3>
+          <div id="inventoryList"></div>
+        </div>
+      </div>
+
+      <div class="folder-tab">Log Investigativo</div>
+      <div class="notes-section">
+        <h3>Report</h3>
+        <textarea
+          id="noteInput"
+          rows="4"
+          placeholder="Inserisci nuovo report..."
+        ></textarea>
+        <button id="saveNote">Salva Report</button>
+        <div id="notesList" class="notes-list"></div>
+      </div>
+    </div>
+
+    <script type="module">
+      import players from "./players-data.js";
+
+      const playerData = JSON.parse(localStorage.getItem("currentPlayer"));
+      if (!playerData) {
+        window.location.href = "login.html";
+      }
+
+      document.getElementById("characterName").textContent =
+        playerData.sheet.name;
+      document.getElementById("characterRole").textContent = playerData.role;
+      document.getElementById("characterBackground").textContent =
+        playerData.sheet.background;
+
+      const cluesList = document.getElementById("cluesList");
+      const cluesKey = `clues_${playerData.username}`;
+      let clues = JSON.parse(localStorage.getItem(cluesKey) || "[]");
+      clues = clues.length ? clues : playerData.sheet.clues;
+
+      function displayClues() {
+        cluesList.innerHTML = "";
+        clues.forEach((clue, index) => {
+          const clueElement = document.createElement("div");
+          clueElement.className = "clue";
+          clueElement.innerHTML = `
+            <span><span class="file-label">File #${
+              index + 1
+            }</span>${clue}</span>
+            <button class="deleteClue" data-index="${index}">Elimina</button>
+          `;
+          cluesList.appendChild(clueElement);
+        });
+
+        document.querySelectorAll(".deleteClue").forEach((button) => {
+          button.addEventListener("click", (e) => {
+            const index = e.target.getAttribute("data-index");
+            clues.splice(index, 1);
+            localStorage.setItem(cluesKey, JSON.stringify(clues));
+            displayClues();
+          });
+        });
+      }
+
+      document.getElementById("addClue").addEventListener("click", () => {
+        const newClueInput = document.getElementById("newClueInput");
+        if (newClueInput.value.trim()) {
+          clues.push(newClueInput.value.trim());
+          localStorage.setItem(cluesKey, JSON.stringify(clues));
+          newClueInput.value = "";
+          displayClues();
+        }
+      });
+
+      displayClues();
+
+      const inventoryList = document.getElementById("inventoryList");
+      playerData.sheet.inventory.forEach((item, index) => {
+        const itemElement = document.createElement("div");
+        itemElement.className = "inventory-item";
+        itemElement.innerHTML = `<span class="file-label">Prova #${
+          index + 1
+        }</span>${item}`;
+        inventoryList.appendChild(itemElement);
+      });
+
+      const notesKey = `notes_${playerData.username}`;
+      let notes = JSON.parse(localStorage.getItem(notesKey) || "[]");
+
+      function displayNotes() {
+        const notesList = document.getElementById("notesList");
+        notesList.innerHTML = "";
+        notes.forEach((note, index) => {
+          const noteElement = document.createElement("div");
+          noteElement.innerHTML = `
+            <p><span class="file-label">Report #${
+              index + 1
+            }</span><span class="timestamp">${new Date(
+            note.timestamp
+          ).toLocaleString()}</span></p>
+            <textarea class="noteText" data-index="${index}">${
+            note.text
+          }</textarea>
+            <button class="deleteNote" data-index="${index}">Elimina</button>
+            <hr>
+          `;
+          notesList.appendChild(noteElement);
+        });
+
+        document.querySelectorAll(".noteText").forEach((textarea) => {
+          textarea.addEventListener("change", (e) => {
+            const index = e.target.getAttribute("data-index");
+            notes[index].text = e.target.value;
+            localStorage.setItem(notesKey, JSON.stringify(notes));
+          });
+        });
+
+        document.querySelectorAll(".deleteNote").forEach((button) => {
+          button.addEventListener("click", (e) => {
+            const index = e.target.getAttribute("data-index");
+            notes.splice(index, 1);
+            localStorage.setItem(notesKey, JSON.stringify(notes));
+            displayNotes();
+          });
+        });
+      }
+
+      document.getElementById("saveNote").addEventListener("click", () => {
+        const noteInput = document.getElementById("noteInput");
+        if (noteInput.value.trim()) {
+          notes.push({
+            timestamp: new Date(),
+            text: noteInput.value.trim(),
+          });
+          localStorage.setItem(notesKey, JSON.stringify(notes));
+          noteInput.value = "";
+          displayNotes();
+        }
+      });
+
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        localStorage.removeItem("currentPlayer");
+        window.location.href = "login.html";
+      });
+
+      displayNotes();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scena del Crimine - Cena con Delitto</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="crime-scene-header">
+      <h1>Scena del Crimine</h1>
+    </header>
+
+    <main class="crime-scene-container">
+      <!-- Descrizione -->
+      <section class="crime-description">
+        <h2>Descrizione</h2>
+        <p>
+          Sei nella sala principale della villa. La scena è caotica: un corpo
+          giace sul pavimento, un bicchiere di vino è rovesciato vicino, e
+          l'orologio antico segna le 22:15. Il buio della notte avvolge l'intera
+          villa.
+        </p>
+      </section>
+
+      <!-- Mappa -->
+      <section class="crime-map">
+        <h2>Mappa della Scena</h2>
+        <img
+          src="crime-scene.jpg"
+          alt="Mappa della scena del crimine"
+          class="map-image"
+        />
+      </section>
+    </main>
+
+    <div class="login-container">
+      <button id="logoutBtn">Esci</button>
+    </div>
+
+    <script>
+      // Esempio di indizi
+      const clues = [
+        "Un bicchiere di vino rovesciato",
+        "Una finestra aperta",
+        "Un'impronta di scarpa bagnata",
+        "Un pugnale insanguinato",
+        "Un biglietto con scritta indecifrabile",
+      ];
+
+      const cluesList = document.getElementById("cluesList");
+      const discoverClueButton = document.getElementById("discoverClue");
+
+      // Torna al gioco
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+
+      displayClues();
+    </script>
+  </body>
+</html>

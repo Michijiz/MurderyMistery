@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Cena con Delitto</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Accedi al tuo Personaggio</h1>
+      <form id="loginForm">
+        <input type="text" name="username" placeholder="Nome Utente" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <button type="submit">Accedi</button>
+        <button id="logoutBtn">Esci</button>
+      </form>
+      <p id="errorMessage" style="color: red"></p>
+    </div>
+
+    <script type="module">
+      import players from "./players-data.js";
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const username = this.username.value;
+          const password = this.password.value;
+          const player = players[username];
+
+          if (player && player.password === password) {
+            // Salva i dati della sessione
+            localStorage.setItem(
+              "currentPlayer",
+              JSON.stringify({
+                username,
+                role: player.role,
+                sheet: player.sheet,
+              })
+            );
+            // Reindirizza alla pagina del gioco
+            window.location.href = "game.html";
+          } else {
+            document.getElementById("errorMessage").textContent =
+              "Username o password non corretti";
+          }
+        });
+
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        localStorage.removeItem("currentPlayer");
+        window.location.href = "index.html";
+      });
+
+      // Controlla se l'utente è già loggato
+      window.addEventListener("load", function () {
+        const currentPlayer = localStorage.getItem("currentPlayer");
+        if (currentPlayer) {
+          window.location.href = "game.html";
+        }
+      });
+    </script>
+  </body>
+</html>
