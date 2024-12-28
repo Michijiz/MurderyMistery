@@ -13,7 +13,7 @@ Amicizia con Ale (amici di una vita, separati dalla telomerizazzione);
 Madre di michi, aurora e tizio x;
 Sorella di Marco;
 Valentina migliore amica di Laura;
-indizi: cartella clinica anticorpi negativi, lettera prova trovata nel suo ufficio per discorso da fare a cena.
+indizi: cartella clinica anticorpi negativi, lettera prova trovata nel suo ufficio per discorso da fare a cena, testamento inizialmente suddiviso per egual parti poi modificato all'ultimo. (telomerizzata)
 
 ## I Sospettati
 
@@ -24,9 +24,14 @@ indizi: cartella clinica anticorpi negativi, lettera prova trovata nel suo uffic
 collegamenti: - Amico d'infanzia di Giovanni; - Relazione con Valentina;
 
 - Movente possibile: Amico sd'infanzia con Giovanni, rivale storico della eternal life corp.
+indizi : appunti segreti criptati, mail scambiata con assistente personale  (giuggi) in cui si mostra particolare affetto nei confronti di Laura.
+alibi: non ha raccolto le informazioni necessarie per potersi mettere in proprio, ergo, laura gli serve ancora viva.
 
-2. **Alice Lentini** non telomerizzata - Ricercatrice, ex-partner di laboratorio di Laura
-   background: Colei che ha somministrato le dosi di vaccino, ed è stata d'aiuto nella ricerca per quest'ultimo, inoltre da quando ha somministrato la dose, consapevole degli esami svolti su laura per valutare l'efficacia del vaccino, è venuta a sapere che il vaccino non ha avuto effetto e quindi ha preferito non dirglielo così che potesse salvare il suo posto. da li in poi ha cominciato a soffrire di attacchi di panico, curandosi con lo xanax.
+2. **Alice Lentini**- Ricercatrice, ex-partner di laboratorio di Laura
+   background: Colei che ha somministrato la dose di vaccino, ed è stata d'aiuto nella ricerca per quest'ultimo, inoltre da quando ha somministrato la dose, consapevole degli esami svolti su laura per valutare l'efficacia del vaccino, è venuta a sapere che il vaccino non ha avuto effetto e quindi ha preferito non dirglielo così che potesse salvare il suo posto. da li in poi ha cominciato a soffrire di attacchi di panico, curandosi con lo xanax.
+   
+   indizi: cartella clinica anomala, prescrizione di xanax e un flacone di xanax con se, lettera d'amore a giovanni ()
+   alibi: pentita e dice tutta la veritàa a giovanni
 
 collegamenti: - Amante di Giovanni geno (relazione che è finita male perchè Laura ha scoperto di loro, perchè a Laura serviva Alice per il vaccino.) -
 

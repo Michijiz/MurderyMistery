@@ -227,7 +227,7 @@ const players = {
       inventory: ["Badge di sicurezza master", "Registri di accesso"],
     },
   },
-  Giovanni_Rivale: {
+  Giovanni: {
     password: "123",
     role: "scienziato rivale",
     sheet: {
