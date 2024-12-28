@@ -45,6 +45,7 @@ const players = {
         "Scienziata senior della Eternal Life Corp, nutre rancore verso Laura per essere stata sempre messa in ombra professionalmente.",
       clues: [
         "Ha una relazione segreta con Giovanni Geno, interloquisci ma neanche troppo con lui",
+        "Sai che in laboratorio sono presenti delle fiale di tetradotossina per uccidere senza dolore gli animali che non passano il test",
         "Sei impaurita che Valentina possa scoprire della relazione con Giovanni Geno",
         "Teme che Laura riveli il vostro segreto",
         "Confida a Lorenzo la paura che Laura possa sperperare la relazione tra te e Giovi Geno",
@@ -95,7 +96,7 @@ const players = {
       clues: [
         "Hai notato che Michi è un pò giù di morale, osserva i suoi movimenti, motivalo",
         "Fratello di Lucinao, collabora con lui",
-
+        "fai il vago",
         "Raccomandato da Papà Nino",
         "Limitate competenze scientifiche",
         "Potenzialmente manipolato dal padre",
@@ -114,6 +115,7 @@ const players = {
       clues: [
         "Hai notato che Michi è un pò giù di morale, osserva i suoi movimenti, motivalo",
         "Raccomandato da Nino",
+        "fai il vago",
         "Fratello di Mattia, collabora con lui",
         "Possibile coinvolgimento nei piani di sabotaggio",
         "Presente nei momenti chiave della ricerca",
