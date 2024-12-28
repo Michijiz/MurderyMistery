@@ -302,21 +302,21 @@
           ><span id="characterBackground"></span>
         </p>
 
-        <div id="cluesSection">
-          <h3>Database Indizi</h3>
-          <div id="cluesList"></div>
-          <input
-            type="text"
-            id="newClueInput"
-            placeholder="Inserisci nuovo dato..."
-          />
-          <button id="addClue">Archivia Dato</button>
-        </div>
-
         <div id="inventorySection">
-          <h3>Prove Digitali</h3>
+          <h3>Area top secret</h3>
           <div id="inventoryList"></div>
         </div>
+      </div>
+
+      <div id="cluesSection">
+        <h3>Database Indizi</h3>
+        <div id="cluesList"></div>
+        <input
+          type="text"
+          id="newClueInput"
+          placeholder="Inserisci nuovo dato..."
+        />
+        <button id="addClue">Archivia Dato</button>
       </div>
 
       <div class="folder-tab">Log Investigativo</div>
@@ -391,7 +391,7 @@
       playerData.sheet.inventory.forEach((item, index) => {
         const itemElement = document.createElement("div");
         itemElement.className = "inventory-item";
-        itemElement.innerHTML = `<span class="file-label">Prova #${
+        itemElement.innerHTML = `<span class="file-label">#${
           index + 1
         }</span>${item}`;
         inventoryList.appendChild(itemElement);

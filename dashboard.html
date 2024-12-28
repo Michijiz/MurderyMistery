@@ -14,32 +14,148 @@
     <main class="crime-scene-container">
       <!-- Descrizione -->
       <section class="crime-description">
-        <h2>Descrizione</h2>
-        <p>
-          Sei nella sala principale della villa. La scena è caotica: un corpo
-          giace sul pavimento, un bicchiere di vino è rovesciato vicino, e
-          l'orologio antico segna le 22:15. Il buio della notte avvolge l'intera
-          villa.
-        </p>
+        <h2>Management e Leadership</h2>
+        <div>
+          <h3 style="color: #2980b9">Dr. Laura Cos</h3>
+          <p>
+            Geniale e carismatica scienziata, pioniera della telomerizzazione e
+            fondatrice della Eternal Life Corp. Vedova da vent'anni, ha dedicato
+            la sua vita alla ricerca dell'immortalità dopo la morte del marito.
+            È l'unica paziente vaccinata (Paziente 0) con il TEL-072L.
+          </p>
+
+          <h3 style="color: #e74c3c">Lorenzo Mancuso</h3>
+          <p>
+            Braccio destro di Laura, ricopre un ruolo chiave all'interno
+            dell'azienda come uno dei principali collaboratori del progetto.
+          </p>
+
+          <h3 style="color: #f39c12">Nino</h3>
+          <p>
+            Principale investitore della Eternal Life Corp, padre di Mattia e
+            Adriano, attualmente sta affrontando alcune sfide finanziarie in
+            altre sue attività imprenditoriali.
+          </p>
+        </div>
+
+        <h2>Team Scientifico</h2>
+        <div>
+          <h3 style="color: #16a085">Alice Lentini</h3>
+          <p>
+            Scienziata senior della Eternal Life Corp, con una lunga esperienza
+            nel campo della ricerca.
+          </p>
+
+          <h3 style="color: #9b59b6">Valentina</h3>
+          <p>
+            Medico interno della Eternal Life Corp e migliore amica di Laura,
+            coinvolta in importanti ricerche all'interno dell'azienda.
+          </p>
+
+          <h3 style="color: #c0392b">Giovanni</h3>
+          <p>
+            Ex compagno di università di Laura e scienziato con interessi di
+            ricerca paralleli nel campo.
+          </p>
+        </div>
+
+        <h2>Staff e Supporto</h2>
+        <div>
+          <h3 style="color: #27ae60">Giuggi</h3>
+          <p>
+            Segretaria di Lorenzo Mancuso, nota per la sua efficienza e
+            dedizione al lavoro.
+          </p>
+
+          <h3 style="color: #8e44ad">Giovanni Geno</h3>
+          <p>
+            Capo della sicurezza della Eternal Life Corp, responsabile del
+            controllo degli accessi e della protezione delle informazioni
+            sensibili.
+          </p>
+
+          <h3 style="color: #d35400">Simone</h3>
+          <p>
+            Avvocato della compagnia, gestisce gli aspetti legali e la
+            documentazione dell'azienda.
+          </p>
+        </div>
+
+        <h2>Tirocinanti</h2>
+        <div>
+          <h3 style="color: #2c3e50">Mattia</h3>
+          <p>
+            Figlio di Nino, tirocinante presso l'azienda, sta iniziando il suo
+            percorso professionale nella ricerca.
+          </p>
+
+          <h3 style="color: #7f8c8d">Adriano</h3>
+          <p>
+            Fratello di Mattia e figlio di Nino, anche lui tirocinante
+            all'interno del progetto.
+          </p>
+        </div>
+
+        <h2>Famiglia Cos</h2>
+        <div>
+          <h3 style="color: #3498db">Miki Cos</h3>
+          <p>
+            Figlio maggiore di Laura, ha una visione critica sul progetto di
+            ricerca della madre.
+          </p>
+
+          <h3 style="color: #e67e22">Aurora Cos</h3>
+          <p>
+            Figlia minore di Laura, lavora nell'azienda di famiglia aspirando a
+            ruoli di maggiore responsabilità.
+          </p>
+
+          <h3 style="color: #1abc9c">Marco</h3>
+          <p>
+            Fratello minore di Laura, imprenditore con un percorso professionale
+            indipendente.
+          </p>
+        </div>
+
+        <h2>Altri Personaggi Chiave</h2>
+        <div>
+          <h3 style="color: #2ecc71">Peppe</h3>
+          <p>
+            Titolare del brevetto TEL-072L, ha stretto importanti accordi
+            commerciali con l'azienda.
+          </p>
+
+          <h3 style="color: #34495e">Alessandro Amato</h3>
+          <p>
+            Cardinale di Palermo e amico d'infanzia di Laura, interessato agli
+            aspetti etici della ricerca.
+          </p>
+
+          <h3 style="color: #e84393">Sara Caviglia</h3>
+          <p>
+            Giornalista investigativa con un forte interesse per le attività
+            della Eternal Life Corp.
+          </p>
+        </div>
       </section>
 
-      <!-- Mappa -->
-      <section class="crime-map">
-        <h2>Mappa della Scena</h2>
-        <img
-          src="crime-scene.jpg"
-          alt="Mappa della scena del crimine"
-          class="map-image"
-        />
+      <section class="crime-description">
+        <h2>Dinamiche di Gioco</h2>
+        <div>
+          <h3>Obiettivo</h3>
+          <p>Ogni giocatore deve scoprire il maggior numero di informazioni possibili interagendo con gli altri personaggi per risolvere il mistero, prendete spunto dai vostri database, immaginando come possono essere correllate le dinamiche, siamo sicuri che ci darete soddisfazioni!
+            
+          </p>
+
+          
+        </div>
       </section>
-    </main>
 
     <div class="login-container">
       <button id="logoutBtn">Esci</button>
     </div>
 
     <script>
-      // Esempio di indizi
       const clues = [
         "Un bicchiere di vino rovesciato",
         "Una finestra aperta",
@@ -51,7 +167,6 @@
       const cluesList = document.getElementById("cluesList");
       const discoverClueButton = document.getElementById("discoverClue");
 
-      // Torna al gioco
       document.getElementById("logoutBtn").addEventListener("click", () => {
         window.location.href = "index.html";
       });
