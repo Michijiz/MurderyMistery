@@ -28,11 +28,12 @@ const players = {
         "Braccio destro di Laura, è in realtà un infiltrato che collabora segretamente con Giovanni per sabotare la Eternal Life Corp.",
       clues: [
         "Collabora segretamente con Giovanni",
+        "Elogia Laura, ma al contempo quando nessuno ti vede discuti con Giovanni",
         "Pianifica di creare un antidoto al vaccino",
         "Ha Giuggi come complice fedele",
-        "Lavora come doppio agente all'interno dell'azienda",
+        ,
       ],
-      inventory: ["Documenti compromettenti", "Chiave del laboratorio"],
+      inventory: [],
     },
   },
   Alice: {
@@ -43,12 +44,13 @@ const players = {
       background:
         "Scienziata senior della Eternal Life Corp, nutre rancore verso Laura per essere stata sempre messa in ombra professionalmente.",
       clues: [
-        "Ha una relazione segreta con Giovanni Geno",
-        "Teme che Laura riveli il suo segreto",
+        "Ha una relazione segreta con Giovanni Geno, interloquisci ma neanche troppo con lui",
+        "Sei impaurita che Valentina possa scoprire della relazione con Giovanni Geno",
+        "Teme che Laura riveli il vostro segreto",
+        "Confida a Lorenzo la paura che Laura possa sperperare la relazione tra te e Giovi Geno",
         "Si sente professionally sottovalutata",
-        "Conosce i segreti del laboratorio",
       ],
-      inventory: ["Badge di accesso", "Appunti di ricerca"],
+      inventory: [],
     },
   },
   Giuggi: {
@@ -60,11 +62,10 @@ const players = {
         "Segretaria di Lorenzo Mancuso, fedelmente devota al suo capo e disposta a tutto per proteggerlo.",
       clues: [
         "Aiuta Lorenzo nei suoi piani segreti",
-        "Conosce le attività clandestine di Lorenzo",
-        "Ha accesso a informazioni riservate",
-        "Gestisce la documentazione sensibile",
+        "Difendi a spada tratta Lorenzo qualsiasi cosa succeda",
+        "Per conto di Lorenzo cerca di avere delle informazioni top secret dalla figlia di Laura",
       ],
-      inventory: ["Agenda di Lorenzo", "Chiavi dell'ufficio"],
+      inventory: [],
     },
   },
   Valentina: {
@@ -76,11 +77,12 @@ const players = {
         "Medico interno della Eternal Life Corp e migliore amica di Laura, coinvolta in esperimenti non autorizzati su pazienti.",
       clues: [
         "Conduce esperimenti non autorizzati",
-        "È ricattata da Giovanni Geno",
+        "Sei la moglie di Giovanni Geno",
+        "Giovanni non te la racconta giusta, controllalo",
+
         "Laura minaccia di denunciarla",
-        "Sa della relazione del marito con Alice",
       ],
-      inventory: ["Cartelle cliniche segrete", "Chiave dell'archivio medico"],
+      inventory: [],
     },
   },
   Mattia: {
@@ -91,12 +93,15 @@ const players = {
       background:
         "Figlio di Nino, tirocinante con competenze limitate, inserito nel progetto grazie alla raccomandazione del padre.",
       clues: [
-        "Raccomandato da Nino",
+        "Hai notato che Michi è un pò giù di morale, osserva i suoi movimenti, motivalo",
+        "Fratello di Lucinao, collabora con lui",
+
+        "Raccomandato da Papà Nino",
         "Limitate competenze scientifiche",
         "Potenzialmente manipolato dal padre",
         "Accesso al laboratorio come tirocinante",
       ],
-      inventory: ["Badge di tirocinante", "Appunti del progetto"],
+      inventory: [],
     },
   },
   Luciano: {
@@ -107,12 +112,14 @@ const players = {
       background:
         "Fratello di Mattia e figlio di Nino, anche lui tirocinante con accesso al progetto grazie al padre.",
       clues: [
+        "Hai notato che Michi è un pò giù di morale, osserva i suoi movimenti, motivalo",
         "Raccomandato da Nino",
-        "Fratello di Mattia",
+        "Fratello di Mattia, collabora con lui",
         "Possibile coinvolgimento nei piani di sabotaggio",
-        "Presente nei momenti chiave",
+        "Presente nei momenti chiave della ricerca",
+        "Sostieni tuo padre nelle possibili sfrutiate con Laura",
       ],
-      inventory: ["Badge di tirocinante", "Telefono con messaggi sospetti"],
+      inventory: [],
     },
   },
   Nino: {
@@ -123,12 +130,13 @@ const players = {
       background:
         "Principale investitore della Eternal Life Corp, sta affrontando gravi perdite finanziarie in un'altra sua azienda.",
       clues: [
-        "In disaccordo con Laura sulla tempistica",
+        "In disaccordo con Laura sulla tempistica per il rilascio del vaccino",
         "Ha raccomandato i suoi figli",
         "Problemi finanziari in altre attività",
         "Preoccupato per i rischi del progetto",
+        "Fatti vedere un pò disperato",
       ],
-      inventory: ["Documenti finanziari", "Contratti di investimento"],
+      inventory: [],
     },
   },
   Peppe: {
@@ -140,11 +148,13 @@ const players = {
         "Titolare del brevetto TEL-072L e ex amante di Laura, ha accettato di cedere i diritti esclusivi in cambio di profitti futuri.",
       clues: [
         "Ex relazione con Laura",
+        "Fatti vedere molto amorevole con lei",
         "Accordo sui diritti del brevetto",
         "Conflitti passati sulla gestione",
         "Ha rinunciato ai diritti esclusivi",
+        "Osserva Lorenzo e qulache volta inserisciti nel discorso",
       ],
-      inventory: ["Documenti del brevetto", "Contratto di cessione diritti"],
+      inventory: [],
     },
   },
   Alessandro: {
@@ -155,12 +165,13 @@ const players = {
       background:
         "Cardinale di Palermo e amico d'infanzia di Laura, tormentato dal senso di colpa per non averla fermata nel suo progetto.",
       clues: [
-        "Amicizia d'infanzia con Laura",
-        "Preoccupazioni morali sul vaccino",
+        "Amico d'infanzia con Laura",
+        "Predica a tutti la fede in per cui crede che questo vaccino sia contro le leggi naturali",
         "Conflitto tra fede e scienza",
         "Conoscenza del passato di Laura",
+        "Hai un comportamento da ecclesiastico molto rigido, non sei molto aperto alle discussioni del vaccino.",
       ],
-      inventory: ["Lettere personali di Laura", "Rosario antico"],
+      inventory: [],
     },
   },
   Sara: {
@@ -172,15 +183,15 @@ const players = {
         "Giornalista investigativa che stava preparando un'inchiesta scottante sulla Eternal Life Corp.",
       clues: [
         "Indagine in corso sulla Eternal Life Corp",
+        "Intervista tutti per ottenere più scandali possibili",
         "Possiede informazioni compromettenti",
-        "Interesse nel clamore mediatico",
-        "Accesso a fonti riservate",
+        "Conosce la storia del brevetto, interroga peppe",
       ],
-      inventory: ["Taccuino con appunti", "Registratore nascosto"],
+      inventory: [],
     },
   },
   Miki: {
-    password: "123",
+    password: "nonmiavretemai",
     role: "assassino",
     sheet: {
       name: "Miki Cos",
@@ -192,7 +203,7 @@ const players = {
         "Ha conflitti etici con il progetto della madre",
         "Presente alla cena fatale",
       ],
-      inventory: ["Fiala di tetradotossina", "Chiave di casa di Laura"],
+      inventory: [],
     },
   },
   Aurora: {
@@ -207,8 +218,9 @@ const players = {
         "Si sente sminuita dalla madre",
         "Conosce i segreti familiari",
         "Ha accesso a informazioni riservate",
+        "confidati con Marco tuo zio di tutte queste cose",
       ],
-      inventory: ["Documenti sulla successione", "Diario personale"],
+      inventory: [],
     },
   },
   Giovanni_Geno: {
@@ -224,7 +236,7 @@ const players = {
         "Controlla gli accessi al laboratorio",
         "Matrimonio in crisi",
       ],
-      inventory: ["Badge di sicurezza master", "Registri di accesso"],
+      inventory: [],
     },
   },
   Giovanni: {
@@ -237,10 +249,12 @@ const players = {
       clues: [
         "Collabora segretamente con Lorenzo",
         "Competizione scientifica con Laura",
-        "Piano per sabotare il progetto",
-        "Ricerca sull'antidoto",
+        "Sei contro il vaccino, infatti ti troverai a discutere con il cardinale Amato",
+        "Mostra un pò d'invidia nella realizazzione di Laura",
+        "Hai un antidoto che ti permette di neutralizzare il vaccino",
+        "Qualche volta ridi senza senso per dar l'impressione di essere uno scienziato pazzo",
       ],
-      inventory: ["Progetti di ricerca alternativi", "Prove del sabotaggio"],
+      inventory: [],
     },
   },
   Marco: {
@@ -255,8 +269,9 @@ const players = {
         "Problemi finanziari",
         "Tensioni familiari",
         "Cerca di ottenere benefici dal progetto",
+        "Interagisci con Aurora",
       ],
-      inventory: ["Debiti documentati", "Chiave di casa della famiglia"],
+      inventory: [],
     },
   },
   Simone: {
@@ -267,12 +282,13 @@ const players = {
       background:
         "Avvocato della compagnia, sospettato di coprire operazioni illegali all'interno della Eternal Life Corp.",
       clues: [
-        "Gestisce documenti sensibili",
+        "Sii il più distaccato possibile con gli altri invitati",
+        " Cerca di far trappelare da Nino che ha delle gravi difficoltà finanziarie",
         "Conosce le attività illegali",
         "Protegge gli interessi dell'azienda",
         "Ha accesso a informazioni riservate",
       ],
-      inventory: ["Documenti legali riservati", "Chiave della cassaforte"],
+      inventory: [],
     },
   },
 };
