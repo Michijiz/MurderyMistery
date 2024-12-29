@@ -27,10 +27,8 @@ const players = {
       background:
         "Braccio destro di Laura, è in realtà un infiltrato che collabora segretamente con Giovanni per sabotare la Eternal Life Corp.",
       clues: [
-        "Collabora segretamente con Giovanni",
-        "Elogia Laura, ma al contempo quando nessuno ti vede discuti con Giovanni",
-        "Pianifica di creare un antidoto al vaccino",
-        "Ha Giuggi come complice fedele",
+        "Fai in modo che tutta l'attenzione ricada su di te, disprezzzando il lavoro di Laura, prendendoti i meriti che non ti sono stati riconosciuti",
+
         ,
       ],
       inventory: [],
@@ -44,12 +42,7 @@ const players = {
       background:
         "Scienziata senior della Eternal Life Corp, nutre rancore verso Laura per essere stata sempre messa in ombra professionalmente.",
       clues: [
-        "Ha una relazione segreta con Giovanni Geno, interloquisci ma neanche troppo con lui",
-        "Sai che in laboratorio sono presenti delle fiale di tetradotossina per uccidere senza dolore gli animali che non passano il test",
-        "Sei impaurita che Valentina possa scoprire della relazione con Giovanni Geno",
-        "Teme che Laura riveli il vostro segreto",
-        "Confida a Lorenzo la paura che Laura possa sperperare la relazione tra te e Giovi Geno",
-        "Si sente professionally sottovalutata",
+        "Fai leva sulle fiale che avevi in laboratorio e che gli unici che potevano entrare sono coloro che possiedono il badge",
       ],
       inventory: [],
     },
@@ -62,9 +55,8 @@ const players = {
       background:
         "Segretaria di Lorenzo Mancuso, fedelmente devota al suo capo e disposta a tutto per proteggerlo.",
       clues: [
-        "Aiuta Lorenzo nei suoi piani segreti",
-        "Difendi a spada tratta Lorenzo qualsiasi cosa succeda",
-        "Per conto di Lorenzo cerca di avere delle informazioni top secret dalla figlia di Laura",
+        "Sei stufa del comportamento di Lorenzo, esterna la tua frustrazione nei suoi confronti con un colloquo privato che sfocia in una cosa pubblica, esempio: urlando",
+        "Ipotizza che è stato lui ha far fuori laura difronte a tutti, sbuggiardandolo sul su piano segreto, senza esplicitarlo del tutto",
       ],
       inventory: [],
     },
@@ -77,11 +69,7 @@ const players = {
       background:
         "Medico interno della Eternal Life Corp e migliore amica di Laura, coinvolta in esperimenti non autorizzati su pazienti.",
       clues: [
-        "Conduce esperimenti non autorizzati",
-        "Sei la moglie di Giovanni Geno",
-        "Giovanni non te la racconta giusta, controllalo",
-
-        "Laura minaccia di denunciarla",
+        "Tu sei stata il medico che ha visto per primo la fiala del veleno, ricorda a tutti che qualcuno l'ha rimossa dalla scena del delitto",
       ],
       inventory: [],
     },
@@ -94,13 +82,7 @@ const players = {
       background:
         "Figlio di Nino, tirocinante con competenze limitate, inserito nel progetto grazie alla raccomandazione del padre.",
       clues: [
-        "Hai notato che Michi è un pò giù di morale, osserva i suoi movimenti, motivalo",
-        "Fratello di Lucinao, collabora con lui",
-        "fai il vago",
-        "Raccomandato da Papà Nino",
-        "Limitate competenze scientifiche",
-        "Potenzialmente manipolato dal padre",
-        "Accesso al laboratorio come tirocinante",
+        "Se qualcuno ti dovesse incolpare, continua ad essere vago e scariche le colpe a tuo fratello, aninamatamente",
       ],
       inventory: [],
     },
@@ -113,13 +95,7 @@ const players = {
       background:
         "Fratello di Mattia e figlio di Nino, anche lui tirocinante con accesso al progetto grazie al padre.",
       clues: [
-        "Hai notato che Michi è un pò giù di morale, osserva i suoi movimenti, motivalo",
-        "Raccomandato da Nino",
-        "fai il vago",
-        "Fratello di Mattia, collabora con lui",
-        "Possibile coinvolgimento nei piani di sabotaggio",
-        "Presente nei momenti chiave della ricerca",
-        "Sostieni tuo padre nelle possibili sfrutiate con Laura",
+        "Se qualcuno ti dovesse incolpare, continua ad essere vago e scariche le colpe a tuo fratello, aninamatamente",
       ],
       inventory: [],
     },
@@ -132,11 +108,7 @@ const players = {
       background:
         "Principale investitore della Eternal Life Corp, sta affrontando gravi perdite finanziarie in un'altra sua azienda.",
       clues: [
-        "In disaccordo con Laura sulla tempistica per il rilascio del vaccino",
-        "Ha raccomandato i suoi figli",
-        "Problemi finanziari in altre attività",
-        "Preoccupato per i rischi del progetto",
-        "Fatti vedere un pò disperato",
+        "Sfogati con tutti della tua crisi finanziaria, ricorda a tutti che questa azienda è in piedi grazie a te!",
       ],
       inventory: [],
     },
@@ -149,12 +121,7 @@ const players = {
       background:
         "Titolare del brevetto TEL-072L e ex amante di Laura, ha accettato di cedere i diritti esclusivi in cambio di profitti futuri.",
       clues: [
-        "Ex relazione con Laura",
-        "Fatti vedere molto amorevole con lei",
-        "Accordo sui diritti del brevetto",
-        "Conflitti passati sulla gestione",
-        "Ha rinunciato ai diritti esclusivi",
-        "Osserva Lorenzo e qulache volta inserisciti nel discorso",
+        "Fai vedere i tuoi movimenti bancari da parte dell'azienda nel momento in cui ti incolpano, laura dice che capirai",
       ],
       inventory: [],
     },
@@ -167,11 +134,7 @@ const players = {
       background:
         "Cardinale di Palermo e amico d'infanzia di Laura, tormentato dal senso di colpa per non averla fermata nel suo progetto.",
       clues: [
-        "Amico d'infanzia con Laura",
-        "Predica a tutti la fede in per cui crede che questo vaccino sia contro le leggi naturali",
-        "Conflitto tra fede e scienza",
-        "Conoscenza del passato di Laura",
-        "Hai un comportamento da ecclesiastico molto rigido, non sei molto aperto alle discussioni del vaccino.",
+        "Padre, ripercorri le stazioni della via crucis, per trovare la verità assoluta, tutto questo borbottando. indizio: partendo dal pianoforte",
       ],
       inventory: [],
     },
@@ -184,10 +147,7 @@ const players = {
       background:
         "Giornalista investigativa che stava preparando un'inchiesta scottante sulla Eternal Life Corp.",
       clues: [
-        "Indagine in corso sulla Eternal Life Corp",
-        "Intervista tutti per ottenere più scandali possibili",
-        "Possiede informazioni compromettenti",
-        "Conosce la storia del brevetto, interroga peppe",
+        "Ascolta tutti e riuniscili nel momento opportuno per deporre una conclusione",
       ],
       inventory: [],
     },
@@ -216,11 +176,7 @@ const players = {
       background:
         "Figlia minore di Laura, frustrata per non aver mai ottenuto un ruolo di leadership nell'azienda nonostante il suo impegno.",
       clues: [
-        "Conflitti sulla successione aziendale",
-        "Si sente sminuita dalla madre",
-        "Conosce i segreti familiari",
-        "Ha accesso a informazioni riservate",
-        "confidati con Marco tuo zio di tutte queste cose",
+        "Lamentati di tua madre con il cardinale di come tua madre ti ha trattato e svela informazioni interessanti di come ha maltrattato tuo fratello",
       ],
       inventory: [],
     },
@@ -232,12 +188,7 @@ const players = {
       name: "Giovanni Geno",
       background:
         "Capo della sicurezza della Eternal Life Corp, ricattato da Laura per la sua relazione con Alice Lentini.",
-      clues: [
-        "Relazione segreta con Alice",
-        "Ricattato da Laura",
-        "Controlla gli accessi al laboratorio",
-        "Matrimonio in crisi",
-      ],
+      clues: ["Perquisisci Simone"],
       inventory: [],
     },
   },
@@ -249,12 +200,7 @@ const players = {
       background:
         "Ex compagno di università di Laura e scienziato rivale, nutre rancore per i suoi successi.",
       clues: [
-        "Collabora segretamente con Lorenzo",
-        "Competizione scientifica con Laura",
-        "Sei contro il vaccino, infatti ti troverai a discutere con il cardinale Amato",
-        "Mostra un pò d'invidia nella realizazzione di Laura",
-        "Hai un antidoto che ti permette di neutralizzare il vaccino",
-        "Qualche volta ridi senza senso per dar l'impressione di essere uno scienziato pazzo",
+        "Ridi a più non posso, come se fosse una risata malvagia e svelia a tutti il suo vaccino anti tel",
       ],
       inventory: [],
     },
@@ -267,11 +213,7 @@ const players = {
       background:
         "Fratello minore di Laura e imprenditore fallito, ha sempre vissuto all'ombra della sorella.",
       clues: [
-        "Invidia il successo della sorella",
-        "Problemi finanziari",
-        "Tensioni familiari",
-        "Cerca di ottenere benefici dal progetto",
-        "Interagisci con Aurora",
+        "Trova un modo per difendere a spada tratta tuo nipote, nel caso in cui venga incolpato",
       ],
       inventory: [],
     },
@@ -284,11 +226,7 @@ const players = {
       background:
         "Avvocato della compagnia, sospettato di coprire operazioni illegali all'interno della Eternal Life Corp.",
       clues: [
-        "Sii il più distaccato possibile con gli altri invitati",
-        " Cerca di far trappelare da Nino che ha delle gravi difficoltà finanziarie",
-        "Conosce le attività illegali",
-        "Protegge gli interessi dell'azienda",
-        "Ha accesso a informazioni riservate",
+        "Giustifica la detenzione della provetta di veleno per non danneggiare l'immagine dell'azienda",
       ],
       inventory: [],
     },
